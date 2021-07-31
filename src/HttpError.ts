@@ -12,7 +12,7 @@ export default abstract class HttpError extends Error {
 		readonly mesg: string,
 		readonly data?: Literal
 	) {
-		super(mesg)
+		super(`${name} [${code}]: ${mesg}`)
 	}
 }
 

@@ -1,0 +1,6 @@
+src
+.editorconfig
+.gitignore
+.prettierignore
+generate.js
+tsconfig.json

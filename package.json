@@ -1,0 +1,39 @@
+{
+  "name": "http-class",
+  "version": "0.0.1",
+  "description": "http class for response codes",
+  "main": "index.js",
+  "private": false,
+  "prettier": "@giovannicardamone/prettier-config",
+  "eslintConfig": {
+    "extends": "@giovannicardamone"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint",
+    "build": "tsc",
+    "prepublishOnly": "npm run lint && npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GiovanniCardamone/http-class.git"
+  },
+  "keywords": [
+    "http",
+    "javascript",
+    "typescript",
+    "status-code"
+  ],
+  "author": "Giovanni Cardamone <g.cardamone2@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/GiovanniCardamone/http-class/issues"
+  },
+  "homepage": "https://github.com/GiovanniCardamone/http-class#readme",
+  "devDependencies": {
+    "@giovannicardamone/prettier-config": "^0.0.2"
+  },
+  "dependencies": {
+    "@giovannicardamone/eslint-config": "^0.0.1"
+  }
+}

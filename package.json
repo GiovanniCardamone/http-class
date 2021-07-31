@@ -31,9 +31,7 @@
   },
   "homepage": "https://github.com/GiovanniCardamone/http-class#readme",
   "devDependencies": {
+    "@giovannicardamone/eslint-config": "^0.0.1",
     "@giovannicardamone/prettier-config": "^0.0.2"
-  },
-  "dependencies": {
-    "@giovannicardamone/eslint-config": "^0.0.1"
   }
 }

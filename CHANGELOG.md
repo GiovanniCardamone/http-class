@@ -1,4 +1,8 @@
-# 0.1.0 (2021-08-01)
+## [0.1.1](https://github.com/GiovanniCardamone/http-class/compare/v0.1.0...v0.1.1) (2021-08-01)
+
+
+
+# [0.1.0](https://github.com/GiovanniCardamone/http-class/compare/674405af72040297629308f4a7ce34e24b4a05c6...v0.1.0) (2021-08-01)
 
 
 ### Bug Fixes

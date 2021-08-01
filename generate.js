@@ -1,7 +1,7 @@
+// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs')
-const path = require('path')
 
-template = `
+const template = `
 import HttpError, { Literal } from '../HttpError'
 
 /**
@@ -16,8 +16,8 @@ export default class %short% extends HttpError {
 }
 `
 
-errors = {
-	"4xx": [
+const errors = {
+	'4xx': [
 		[400, 'Bad Request'],
 		[401, 'Unauthorized'],
 		[402, 'Payment Required'],
@@ -48,7 +48,7 @@ errors = {
 		[431, 'Request Header Fields Too Large'],
 		[451, 'Unavailable For Legal Reasons'],
 	],
-	"5xx": [
+	'5xx': [
 		[500, 'Internal Server Error'],
 		[501, 'Not Implemented'],
 		[502, 'Bad Gateway'],
@@ -64,8 +64,8 @@ errors = {
 	],
 }
 
-for ([stx, items] of Object.entries(errors)) {
-	for ([code, name] of items) {
+for (const [stx, items] of Object.entries(errors)) {
+	for (const [code, name] of items) {
 		const short = name.split(' ').join('')
 
 		fs.writeFileSync(
@@ -81,15 +81,3 @@ for ([stx, items] of Object.entries(errors)) {
 		)
 	}
 }
-    // for code, name in items:
-    //     short = name.replace(" ", "")
-
-    //     with open(f"src/{stx}/{short}.ts", "w") as f:
-    //         print(code, short, "=>", name)
-    //         f.write(
-    //             template.format(
-    //                 short=short,
-    //                 name=name,
-    //                 code=code
-    //             )
-    //         )

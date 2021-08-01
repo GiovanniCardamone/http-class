@@ -20,9 +20,6 @@ jobs:
         with:
           node-version: 14
 
-      # Install Peer Dependencies
-      - run: npm install
-
       # Install Dependencies
       - run: npm ci
 
@@ -49,9 +46,6 @@ jobs:
       # Show current package
       - name: cat package.json
         run: cat ./package.json
-
-      # Install Peer Dependencies
-      - run: npm install
 
       # Install Dependencies
       - run: npm ci

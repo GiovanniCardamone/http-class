@@ -1,3 +1,12 @@
+## [0.1.2](https://github.com/GiovanniCardamone/http-class/compare/v0.1.1...v0.1.2) (2021-08-01)
+
+
+### Bug Fixes
+
+* fix deps ([ba566aa](https://github.com/GiovanniCardamone/http-class/commit/ba566aaf239159c65d7d41000e19795c040bb5d4))
+
+
+
 ## [0.1.1](https://github.com/GiovanniCardamone/http-class/compare/v0.1.0...v0.1.1) (2021-08-01)
 
 

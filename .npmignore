@@ -1,6 +1,11 @@
-src
 .editorconfig
+.github
 .gitignore
+.husky
+.nycrc
 .prettierignore
+docs
 generate.js
+src
+tests
 tsconfig.json

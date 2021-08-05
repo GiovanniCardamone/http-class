@@ -1,3 +1,12 @@
+# [0.2.0](https://github.com/GiovanniCardamone/http-class/compare/v0.1.6...v0.2.0) (2021-08-05)
+
+
+### Features
+
+* generic HttpError ([ec40cf1](https://github.com/GiovanniCardamone/http-class/commit/ec40cf1ddf596dca55a541e8b09507febaa26a3b))
+
+
+
 ## [0.1.6](https://github.com/GiovanniCardamone/http-class/compare/v0.1.5...v0.1.6) (2021-08-05)
 
 

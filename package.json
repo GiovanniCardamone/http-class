@@ -1,6 +1,6 @@
 {
   "name": "http-class",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "http class for response codes",
   "main": "dist/index.js",
   "private": false,

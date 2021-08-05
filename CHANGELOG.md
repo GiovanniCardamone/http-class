@@ -1,3 +1,12 @@
+## [0.2.1](https://github.com/GiovanniCardamone/http-class/compare/v0.2.0...v0.2.1) (2021-08-05)
+
+
+### Bug Fixes
+
+* export HttpError ([8ad19d5](https://github.com/GiovanniCardamone/http-class/commit/8ad19d55cbcb6bf9026fd20df9b7d1f0cfb9c6ca))
+
+
+
 # [0.2.0](https://github.com/GiovanniCardamone/http-class/compare/v0.1.6...v0.2.0) (2021-08-05)
 
 

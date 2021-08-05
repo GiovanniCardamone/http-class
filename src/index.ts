@@ -1,4 +1,4 @@
-export { default as HttpError } from './HttpError'
+import { default as HttpError } from './HttpError'
 
 // 4xx
 import { default as BadRequest } from './4xx/BadRequest'
@@ -93,6 +93,8 @@ export const errors = [
 ]
 
 export {
+	HttpError,
+
 	// 4xx
 	BadRequest,
 	Unauthorized,

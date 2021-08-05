@@ -1,3 +1,5 @@
+export { default as HttpError } from './HttpError'
+
 // 4xx
 import { default as BadRequest } from './4xx/BadRequest'
 import { default as Unauthorized } from './4xx/Unauthorized'

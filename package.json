@@ -2,7 +2,7 @@
   "name": "http-class",
   "version": "0.1.4",
   "description": "http class for response codes",
-  "main": "index.js",
+  "main": "dist/index.js",
   "private": false,
   "prettier": "@giovannicardamone/prettier-config",
   "eslintConfig": {

@@ -1,3 +1,12 @@
+# [0.3.0](https://github.com/GiovanniCardamone/http-class/compare/v0.2.1...v0.3.0) (2021-08-08)
+
+
+### Features
+
+* GenericHttpError ([7981b86](https://github.com/GiovanniCardamone/http-class/commit/7981b86ef87ead6d3bcdf1e2d9f5fcae1c8edb54))
+
+
+
 ## [0.2.1](https://github.com/GiovanniCardamone/http-class/compare/v0.2.0...v0.2.1) (2021-08-05)
 
 

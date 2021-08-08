@@ -16,3 +16,9 @@ export default abstract class HttpError extends Error {
 	}
 }
 
+/**
+ *
+ */
+export class GenericHttpError extends Error {
+
+}

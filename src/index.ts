@@ -1,4 +1,4 @@
-import { default as HttpError } from './HttpError'
+import { default as HttpError, GenericHttpError } from './HttpError'
 
 // 4xx
 import { default as BadRequest } from './4xx/BadRequest'
@@ -93,7 +93,7 @@ export const errors = [
 ]
 
 export {
-	HttpError,
+	HttpError, GenericHttpError,
 
 	// 4xx
 	BadRequest,

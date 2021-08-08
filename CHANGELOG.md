@@ -1,3 +1,12 @@
+## [0.3.1](https://github.com/GiovanniCardamone/http-class/compare/v0.3.0...v0.3.1) (2021-08-08)
+
+
+### Bug Fixes
+
+* GenericHttpError ([3117dd0](https://github.com/GiovanniCardamone/http-class/commit/3117dd0b01c69fe835f6f6c63f5fca10aee88130))
+
+
+
 # [0.3.0](https://github.com/GiovanniCardamone/http-class/compare/v0.2.1...v0.3.0) (2021-08-08)
 
 
@@ -56,21 +65,6 @@
 
 
 ## [0.1.1](https://github.com/GiovanniCardamone/http-class/compare/v0.1.0...v0.1.1) (2021-08-01)
-
-
-
-# [0.1.0](https://github.com/GiovanniCardamone/http-class/compare/674405af72040297629308f4a7ce34e24b4a05c6...v0.1.0) (2021-08-01)
-
-
-### Bug Fixes
-
-* no test for now ([e8b84e9](https://github.com/GiovanniCardamone/http-class/commit/e8b84e9031e0cccf588d696c71ee219959d5db77))
-* unrequired deps moved to devDependencies ([06a5618](https://github.com/GiovanniCardamone/http-class/commit/06a56187262800775bf10695f9d831850531efcc))
-
-
-### Features
-
-* http error classes ([674405a](https://github.com/GiovanniCardamone/http-class/commit/674405af72040297629308f4a7ce34e24b4a05c6))
 
 
 

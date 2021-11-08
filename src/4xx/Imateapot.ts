@@ -1,9 +1,11 @@
 
 import HttpError, { Literal } from '../HttpError'
+import { schema } from 'class-schema'
 
 /**
  * Http Error 418: Im a teapot
  */
+@schema()
 export default class Imateapot extends HttpError {
 	static CODE = 418
 

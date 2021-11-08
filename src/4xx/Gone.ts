@@ -1,9 +1,11 @@
 
 import HttpError, { Literal } from '../HttpError'
+import { schema } from 'class-schema'
 
 /**
  * Http Error 410: Gone
  */
+@schema()
 export default class Gone extends HttpError {
 	static CODE = 410
 

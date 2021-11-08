@@ -1,9 +1,11 @@
 
 import HttpError, { Literal } from '../HttpError'
+import { schema } from 'class-schema'
 
 /**
  * Http Error 400: Bad Request
  */
+@schema()
 export default class BadRequest extends HttpError {
 	static CODE = 400
 

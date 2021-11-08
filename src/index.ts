@@ -1,3 +1,5 @@
+import 'reflect-metadata'
+
 import { default as HttpError, GenericHttpError } from './HttpError'
 
 // 4xx

@@ -1,9 +1,11 @@
 
 import HttpError, { Literal } from '../HttpError'
+import { schema } from 'class-schema'
 
 /**
  * Http Error 429: Too Many Requests
  */
+@schema()
 export default class TooManyRequests extends HttpError {
 	static CODE = 429
 

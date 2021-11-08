@@ -1,9 +1,11 @@
 
 import HttpError, { Literal } from '../HttpError'
+import { schema } from 'class-schema'
 
 /**
  * Http Error 502: Bad Gateway
  */
+@schema()
 export default class BadGateway extends HttpError {
 	static CODE = 502
 

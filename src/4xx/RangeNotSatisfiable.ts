@@ -1,9 +1,11 @@
 
 import HttpError, { Literal } from '../HttpError'
+import { schema } from 'class-schema'
 
 /**
  * Http Error 416: Range Not Satisfiable
  */
+@schema()
 export default class RangeNotSatisfiable extends HttpError {
 	static CODE = 416
 

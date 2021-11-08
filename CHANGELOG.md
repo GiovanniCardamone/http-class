@@ -1,3 +1,12 @@
+# [0.4.0](https://github.com/GiovanniCardamone/http-class/compare/v0.3.1...v0.4.0) (2021-11-08)
+
+
+### Features
+
+* classes ([866eed5](https://github.com/GiovanniCardamone/http-class/commit/866eed54dc5dbcac423bc3912fa49c4969236603))
+
+
+
 ## [0.3.1](https://github.com/GiovanniCardamone/http-class/compare/v0.3.0...v0.3.1) (2021-08-08)
 
 
@@ -61,10 +70,6 @@
 ### Bug Fixes
 
 * fix deps ([ba566aa](https://github.com/GiovanniCardamone/http-class/commit/ba566aaf239159c65d7d41000e19795c040bb5d4))
-
-
-
-## [0.1.1](https://github.com/GiovanniCardamone/http-class/compare/v0.1.0...v0.1.1) (2021-08-01)
 
 
 

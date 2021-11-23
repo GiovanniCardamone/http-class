@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class ServiceUnavailable extends HttpError {
 	static CODE = 503
 
-	constructor(mesg: string, data?: Literal) {
-		super(ServiceUnavailable.CODE, 'Service Unavailable', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(ServiceUnavailable.CODE, info?.name || 'Service Unavailable', mesg, info?.key, info?.data)
 	}
 }

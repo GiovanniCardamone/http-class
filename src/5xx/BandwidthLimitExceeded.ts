@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class BandwidthLimitExceeded extends HttpError {
 	static CODE = 509
 
-	constructor(mesg: string, data?: Literal) {
-		super(BandwidthLimitExceeded.CODE, 'Bandwidth Limit Exceeded', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(BandwidthLimitExceeded.CODE, info?.name || 'Bandwidth Limit Exceeded', mesg, info?.key, info?.data)
 	}
 }

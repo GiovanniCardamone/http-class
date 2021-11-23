@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class VariantAlsoNegotiates extends HttpError {
 	static CODE = 506
 
-	constructor(mesg: string, data?: Literal) {
-		super(VariantAlsoNegotiates.CODE, 'Variant Also Negotiates', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(VariantAlsoNegotiates.CODE, info?.name || 'Variant Also Negotiates', mesg, info?.key, info?.data)
 	}
 }

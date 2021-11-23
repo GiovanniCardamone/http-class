@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class MethodNotAllowed extends HttpError {
 	static CODE = 405
 
-	constructor(mesg: string, data?: Literal) {
-		super(MethodNotAllowed.CODE, 'Method Not Allowed', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(MethodNotAllowed.CODE, info?.name || 'Method Not Allowed', mesg, info?.key, info?.data)
 	}
 }

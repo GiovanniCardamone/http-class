@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class Imateapot extends HttpError {
 	static CODE = 418
 
-	constructor(mesg: string, data?: Literal) {
-		super(Imateapot.CODE, 'Im a teapot', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(Imateapot.CODE, info?.name || 'Im a teapot', mesg, info?.key, info?.data)
 	}
 }

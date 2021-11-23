@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class InternalServerError extends HttpError {
 	static CODE = 500
 
-	constructor(mesg: string, data?: Literal) {
-		super(InternalServerError.CODE, 'Internal Server Error', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(InternalServerError.CODE, info?.name || 'Internal Server Error', mesg, info?.key, info?.data)
 	}
 }

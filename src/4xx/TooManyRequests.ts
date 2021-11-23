@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class TooManyRequests extends HttpError {
 	static CODE = 429
 
-	constructor(mesg: string, data?: Literal) {
-		super(TooManyRequests.CODE, 'Too Many Requests', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(TooManyRequests.CODE, info?.name || 'Too Many Requests', mesg, info?.key, info?.data)
 	}
 }

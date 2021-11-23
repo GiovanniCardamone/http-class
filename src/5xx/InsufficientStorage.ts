@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class InsufficientStorage extends HttpError {
 	static CODE = 507
 
-	constructor(mesg: string, data?: Literal) {
-		super(InsufficientStorage.CODE, 'Insufficient Storage', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(InsufficientStorage.CODE, info?.name || 'Insufficient Storage', mesg, info?.key, info?.data)
 	}
 }

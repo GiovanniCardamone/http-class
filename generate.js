@@ -2,7 +2,7 @@
 const fs = require('fs')
 
 const template = `
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -12,8 +12,8 @@ import { schema } from 'class-schema'
 export default class %short% extends HttpError {
 	static CODE = %code%
 
-	constructor(mesg: string, data?: Literal) {
-		super(%short%.CODE, '%name%', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(%short%.CODE, info?.name || '%name%', mesg, info?.key, info?.data)
 	}
 }
 `

@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class TooEarly extends HttpError {
 	static CODE = 425
 
-	constructor(mesg: string, data?: Literal) {
-		super(TooEarly.CODE, 'Too Early', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(TooEarly.CODE, info?.name || 'Too Early', mesg, info?.key, info?.data)
 	}
 }

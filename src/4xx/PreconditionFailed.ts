@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class PreconditionFailed extends HttpError {
 	static CODE = 412
 
-	constructor(mesg: string, data?: Literal) {
-		super(PreconditionFailed.CODE, 'Precondition Failed', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(PreconditionFailed.CODE, info?.name || 'Precondition Failed', mesg, info?.key, info?.data)
 	}
 }

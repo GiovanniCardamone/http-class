@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class URITooLong extends HttpError {
 	static CODE = 414
 
-	constructor(mesg: string, data?: Literal) {
-		super(URITooLong.CODE, 'URI Too Long', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(URITooLong.CODE, info?.name || 'URI Too Long', mesg, info?.key, info?.data)
 	}
 }

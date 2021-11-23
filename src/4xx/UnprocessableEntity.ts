@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class UnprocessableEntity extends HttpError {
 	static CODE = 422
 
-	constructor(mesg: string, data?: Literal) {
-		super(UnprocessableEntity.CODE, 'Unprocessable Entity', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(UnprocessableEntity.CODE, info?.name || 'Unprocessable Entity', mesg, info?.key, info?.data)
 	}
 }

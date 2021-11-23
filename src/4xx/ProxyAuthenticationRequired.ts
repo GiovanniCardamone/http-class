@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class ProxyAuthenticationRequired extends HttpError {
 	static CODE = 407
 
-	constructor(mesg: string, data?: Literal) {
-		super(ProxyAuthenticationRequired.CODE, 'Proxy Authentication Required', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(ProxyAuthenticationRequired.CODE, info?.name || 'Proxy Authentication Required', mesg, info?.key, info?.data)
 	}
 }

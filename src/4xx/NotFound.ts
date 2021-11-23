@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class NotFound extends HttpError {
 	static CODE = 404
 
-	constructor(mesg: string, data?: Literal) {
-		super(NotFound.CODE, 'Not Found', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(NotFound.CODE, info?.name || 'Not Found', mesg, info?.key, info?.data)
 	}
 }

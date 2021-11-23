@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class RequestHeaderFieldsTooLarge extends HttpError {
 	static CODE = 431
 
-	constructor(mesg: string, data?: Literal) {
-		super(RequestHeaderFieldsTooLarge.CODE, 'Request Header Fields Too Large', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(RequestHeaderFieldsTooLarge.CODE, info?.name || 'Request Header Fields Too Large', mesg, info?.key, info?.data)
 	}
 }

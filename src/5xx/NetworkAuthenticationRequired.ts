@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class NetworkAuthenticationRequired extends HttpError {
 	static CODE = 511
 
-	constructor(mesg: string, data?: Literal) {
-		super(NetworkAuthenticationRequired.CODE, 'Network Authentication Required', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(NetworkAuthenticationRequired.CODE, info?.name || 'Network Authentication Required', mesg, info?.key, info?.data)
 	}
 }

@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class ExpectationFailed extends HttpError {
 	static CODE = 417
 
-	constructor(mesg: string, data?: Literal) {
-		super(ExpectationFailed.CODE, 'Expectation Failed', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(ExpectationFailed.CODE, info?.name || 'Expectation Failed', mesg, info?.key, info?.data)
 	}
 }

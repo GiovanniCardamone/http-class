@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class PayloadTooLarge extends HttpError {
 	static CODE = 413
 
-	constructor(mesg: string, data?: Literal) {
-		super(PayloadTooLarge.CODE, 'Payload Too Large', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(PayloadTooLarge.CODE, info?.name || 'Payload Too Large', mesg, info?.key, info?.data)
 	}
 }

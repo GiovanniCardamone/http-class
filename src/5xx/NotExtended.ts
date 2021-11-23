@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class NotExtended extends HttpError {
 	static CODE = 510
 
-	constructor(mesg: string, data?: Literal) {
-		super(NotExtended.CODE, 'Not Extended', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(NotExtended.CODE, info?.name || 'Not Extended', mesg, info?.key, info?.data)
 	}
 }

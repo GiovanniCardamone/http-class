@@ -1,5 +1,5 @@
 
-import HttpError, { Literal } from '../HttpError'
+import HttpError, { Literal, ErrorInfo } from '../HttpError'
 import { schema } from 'class-schema'
 
 /**
@@ -9,7 +9,7 @@ import { schema } from 'class-schema'
 export default class LoopDetected extends HttpError {
 	static CODE = 508
 
-	constructor(mesg: string, data?: Literal) {
-		super(LoopDetected.CODE, 'Loop Detected', mesg, data)
+	constructor(mesg: string, info?: ErrorInfo) {
+		super(LoopDetected.CODE, info?.name || 'Loop Detected', mesg, info?.key, info?.data)
 	}
 }

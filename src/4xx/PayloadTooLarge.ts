@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 413: Payload Too Large
  */
-@schema()
+@schema({ description: 'Payload Too Large' })
 export default class PayloadTooLarge extends HttpError {
 	static CODE = 413
 

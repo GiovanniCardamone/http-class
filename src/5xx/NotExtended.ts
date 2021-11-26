@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 510: Not Extended
  */
-@schema()
+@schema({ description: 'Not Extended' })
 export default class NotExtended extends HttpError {
 	static CODE = 510
 

@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 509: Bandwidth Limit Exceeded
  */
-@schema()
+@schema({ description: 'Bandwidth Limit Exceeded' })
 export default class BandwidthLimitExceeded extends HttpError {
 	static CODE = 509
 

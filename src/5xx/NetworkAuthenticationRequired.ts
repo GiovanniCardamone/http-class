@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 511: Network Authentication Required
  */
-@schema()
+@schema({ description: 'Network Authentication Required' })
 export default class NetworkAuthenticationRequired extends HttpError {
 	static CODE = 511
 

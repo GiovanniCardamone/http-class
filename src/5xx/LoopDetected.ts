@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 508: Loop Detected
  */
-@schema()
+@schema({ description: 'Loop Detected' })
 export default class LoopDetected extends HttpError {
 	static CODE = 508
 

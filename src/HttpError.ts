@@ -23,7 +23,7 @@ export default class HttpError extends Error {
 	@prop()
 	message: string
 
-	@prop()
+	@prop({ required: false })
 	key?: string
 
 	@prop({ required: false })

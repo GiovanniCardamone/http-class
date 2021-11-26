@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 414: URI Too Long
  */
-@schema()
+@schema({ description: 'URI Too Long' })
 export default class URITooLong extends HttpError {
 	static CODE = 414
 

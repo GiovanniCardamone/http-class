@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 404: Not Found
  */
-@schema()
+@schema({ description: 'Not Found' })
 export default class NotFound extends HttpError {
 	static CODE = 404
 

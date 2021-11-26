@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 415: Unsupported Media Type
  */
-@schema()
+@schema({ description: 'Unsupported Media Type' })
 export default class UnsupportedMediaType extends HttpError {
 	static CODE = 415
 

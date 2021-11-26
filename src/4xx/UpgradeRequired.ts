@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 426: Upgrade Required
  */
-@schema()
+@schema({ description: 'Upgrade Required' })
 export default class UpgradeRequired extends HttpError {
 	static CODE = 426
 

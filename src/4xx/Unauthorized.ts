@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 401: Unauthorized
  */
-@schema()
+@schema({ description: 'Unauthorized' })
 export default class Unauthorized extends HttpError {
 	static CODE = 401
 

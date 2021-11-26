@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 424: Failed Dependency
  */
-@schema()
+@schema({ description: 'Failed Dependency' })
 export default class FailedDependency extends HttpError {
 	static CODE = 424
 

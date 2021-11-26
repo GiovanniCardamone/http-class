@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 428: Precondition Required
  */
-@schema()
+@schema({ description: 'Precondition Required' })
 export default class PreconditionRequired extends HttpError {
 	static CODE = 428
 

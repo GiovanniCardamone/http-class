@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 502: Bad Gateway
  */
-@schema()
+@schema({ description: 'Bad Gateway' })
 export default class BadGateway extends HttpError {
 	static CODE = 502
 

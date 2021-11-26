@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 417: Expectation Failed
  */
-@schema()
+@schema({ description: 'Expectation Failed' })
 export default class ExpectationFailed extends HttpError {
 	static CODE = 417
 

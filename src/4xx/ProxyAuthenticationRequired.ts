@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 407: Proxy Authentication Required
  */
-@schema()
+@schema({ description: 'Proxy Authentication Required' })
 export default class ProxyAuthenticationRequired extends HttpError {
 	static CODE = 407
 

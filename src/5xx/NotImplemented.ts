@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 501: Not Implemented
  */
-@schema()
+@schema({ description: 'Not Implemented' })
 export default class NotImplemented extends HttpError {
 	static CODE = 501
 

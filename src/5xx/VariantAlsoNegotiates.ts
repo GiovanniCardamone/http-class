@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 506: Variant Also Negotiates
  */
-@schema()
+@schema({ description: 'Variant Also Negotiates' })
 export default class VariantAlsoNegotiates extends HttpError {
 	static CODE = 506
 

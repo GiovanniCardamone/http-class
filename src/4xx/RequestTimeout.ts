@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 408: Request Timeout
  */
-@schema()
+@schema({ description: 'Request Timeout' })
 export default class RequestTimeout extends HttpError {
 	static CODE = 408
 

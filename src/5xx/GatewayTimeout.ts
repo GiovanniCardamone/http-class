@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 504: Gateway Timeout
  */
-@schema()
+@schema({ description: 'Gateway Timeout' })
 export default class GatewayTimeout extends HttpError {
 	static CODE = 504
 

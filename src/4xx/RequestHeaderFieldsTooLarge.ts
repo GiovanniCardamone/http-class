@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 431: Request Header Fields Too Large
  */
-@schema()
+@schema({ description: 'Request Header Fields Too Large' })
 export default class RequestHeaderFieldsTooLarge extends HttpError {
 	static CODE = 431
 

@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 422: Unprocessable Entity
  */
-@schema()
+@schema({ description: 'Unprocessable Entity' })
 export default class UnprocessableEntity extends HttpError {
 	static CODE = 422
 

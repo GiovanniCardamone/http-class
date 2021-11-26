@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 402: Payment Required
  */
-@schema()
+@schema({ description: 'Payment Required' })
 export default class PaymentRequired extends HttpError {
 	static CODE = 402
 

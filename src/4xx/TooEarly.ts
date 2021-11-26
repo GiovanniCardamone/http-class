@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 425: Too Early
  */
-@schema()
+@schema({ description: 'Too Early' })
 export default class TooEarly extends HttpError {
 	static CODE = 425
 

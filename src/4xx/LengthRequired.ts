@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 411: Length Required
  */
-@schema()
+@schema({ description: 'Length Required' })
 export default class LengthRequired extends HttpError {
 	static CODE = 411
 

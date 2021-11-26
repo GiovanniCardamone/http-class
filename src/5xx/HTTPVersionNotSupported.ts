@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 505: HTTP Version Not Supported
  */
-@schema()
+@schema({ description: 'HTTP Version Not Supported' })
 export default class HTTPVersionNotSupported extends HttpError {
 	static CODE = 505
 

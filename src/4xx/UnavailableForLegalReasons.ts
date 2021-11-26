@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 451: Unavailable For Legal Reasons
  */
-@schema()
+@schema({ description: 'Unavailable For Legal Reasons' })
 export default class UnavailableForLegalReasons extends HttpError {
 	static CODE = 451
 

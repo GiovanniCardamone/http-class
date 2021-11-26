@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 418: Im a teapot
  */
-@schema()
+@schema({ description: 'Im a teapot' })
 export default class Imateapot extends HttpError {
 	static CODE = 418
 

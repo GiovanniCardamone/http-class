@@ -8,7 +8,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error %code%: %name%
  */
-@schema()
+@schema({ description: '%name%' })
 export default class %short% extends HttpError {
 	static CODE = %code%
 

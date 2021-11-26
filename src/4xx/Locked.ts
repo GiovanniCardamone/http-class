@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 423: Locked
  */
-@schema()
+@schema({ description: 'Locked' })
 export default class Locked extends HttpError {
 	static CODE = 423
 

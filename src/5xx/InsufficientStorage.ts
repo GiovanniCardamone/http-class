@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 507: Insufficient Storage
  */
-@schema()
+@schema({ description: 'Insufficient Storage' })
 export default class InsufficientStorage extends HttpError {
 	static CODE = 507
 

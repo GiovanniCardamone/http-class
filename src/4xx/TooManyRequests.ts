@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 429: Too Many Requests
  */
-@schema()
+@schema({ description: 'Too Many Requests' })
 export default class TooManyRequests extends HttpError {
 	static CODE = 429
 

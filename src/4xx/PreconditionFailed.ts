@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 412: Precondition Failed
  */
-@schema()
+@schema({ description: 'Precondition Failed' })
 export default class PreconditionFailed extends HttpError {
 	static CODE = 412
 

@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 410: Gone
  */
-@schema()
+@schema({ description: 'Gone' })
 export default class Gone extends HttpError {
 	static CODE = 410
 

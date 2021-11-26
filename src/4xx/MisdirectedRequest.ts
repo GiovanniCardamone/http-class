@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 421: Misdirected Request
  */
-@schema()
+@schema({ description: 'Misdirected Request' })
 export default class MisdirectedRequest extends HttpError {
 	static CODE = 421
 

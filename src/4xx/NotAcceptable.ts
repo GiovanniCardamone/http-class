@@ -5,7 +5,7 @@ import { schema } from 'class-schema'
 /**
  * Http Error 406: Not Acceptable
  */
-@schema()
+@schema({ description: 'Not Acceptable' })
 export default class NotAcceptable extends HttpError {
 	static CODE = 406
 

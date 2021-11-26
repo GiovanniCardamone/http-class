@@ -1,3 +1,12 @@
+# [0.5.0](https://github.com/GiovanniCardamone/http-class/compare/v0.4.0...v0.5.0) (2021-11-23)
+
+
+### Features
+
+* improving error classes ([2d3fa5e](https://github.com/GiovanniCardamone/http-class/commit/2d3fa5ea68646d741cb54ac4407ae800c6cbf3e4))
+
+
+
 # [0.4.0](https://github.com/GiovanniCardamone/http-class/compare/v0.3.1...v0.4.0) (2021-11-08)
 
 
@@ -61,15 +70,6 @@
 
 
 ## [0.1.3](https://github.com/GiovanniCardamone/http-class/compare/v0.1.2...v0.1.3) (2021-08-01)
-
-
-
-## [0.1.2](https://github.com/GiovanniCardamone/http-class/compare/v0.1.1...v0.1.2) (2021-08-01)
-
-
-### Bug Fixes
-
-* fix deps ([ba566aa](https://github.com/GiovanniCardamone/http-class/commit/ba566aaf239159c65d7d41000e19795c040bb5d4))
 
 
 

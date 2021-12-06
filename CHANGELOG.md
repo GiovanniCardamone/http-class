@@ -1,3 +1,12 @@
+# [0.7.0](https://github.com/GiovanniCardamone/http-class/compare/v0.6.0...v0.7.0) (2021-12-06)
+
+
+### Features
+
+* added codeToName function ([f3bbcaf](https://github.com/GiovanniCardamone/http-class/commit/f3bbcaf2303c898dfb5a9e324b943c5d3bc91b2a))
+
+
+
 # [0.6.0](https://github.com/GiovanniCardamone/http-class/compare/v0.5.0...v0.6.0) (2021-11-26)
 
 
@@ -71,10 +80,6 @@
 
 
 ## [0.1.5](https://github.com/GiovanniCardamone/http-class/compare/v0.1.4...v0.1.5) (2021-08-04)
-
-
-
-## [0.1.4](https://github.com/GiovanniCardamone/http-class/compare/v0.1.3...v0.1.4) (2021-08-04)
 
 
 

@@ -6,7 +6,7 @@
   "private": false,
   "prettier": "@giovannicardamone/prettier-config",
   "eslintConfig": {
-    "extends": "@giovannicardamone"
+    "extends": "@giovannicardamone/eslint-config"
   },
   "scripts": {
     "test": "exit 0",

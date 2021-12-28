@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 
-import { default as HttpError, GenericHttpError } from './HttpError'
+import { default as HttpError, ErrorInfo, GenericHttpError } from './HttpError'
 
 // 4xx
 import { default as BadRequest } from './4xx/BadRequest'
@@ -187,5 +187,62 @@ export function codeToName(code: number): string {
 	case 510: return 'Not Extended'
 	case 511: return 'Network Authentication Required'
 	default: return `Unknonwn(${code})`
+	}
+}
+
+interface HttpErrorConstructor {
+	// eslint-disable-next-line
+	new (mesg: string, info?: ErrorInfo): HttpErrorConstructor
+}
+
+export function codeToClass (code: number) {
+	switch (code) {
+	case 400: return BadRequest
+	case 401: return Unauthorized
+	case 402: return PaymentRequired
+	case 403: return Forbidden
+	case 404: return NotFound
+	case 405: return MethodNotAllowed
+	case 406: return NotAcceptable
+	case 407: return ProxyAuthenticationRequired
+	case 408: return RequestTimeout
+	case 409: return Conflict
+	case 410: return Gone
+	case 411: return LengthRequired
+	case 412: return PreconditionFailed
+	case 413: return PayloadTooLarge
+	case 414: return URITooLong
+	case 415: return UnsupportedMediaType
+	case 416: return RangeNotSatisfiable
+	case 417: return ExpectationFailed
+	case 418: return Imateapot
+	case 421: return MisdirectedRequest
+	case 422: return UnprocessableEntity
+	case 423: return Locked
+	case 424: return FailedDependency
+	case 425: return TooEarly
+	case 426: return UpgradeRequired
+	case 428: return PreconditionRequired
+	case 429: return TooManyRequests
+	case 431: return RequestHeaderFieldsTooLarge
+	case 451: return UnavailableForLegalReasons
+	case 500: return InternalServerError
+	case 501: return NotImplemented
+	case 502: return BadGateway
+	case 503: return ServiceUnavailable
+	case 504: return GatewayTimeout
+	case 505: return HTTPVersionNotSupported
+	case 506: return VariantAlsoNegotiates
+	case 507: return InsufficientStorage
+	case 508: return LoopDetected
+	case 509: return BandwidthLimitExceeded
+	case 510: return NotExtended
+	case 511: return NetworkAuthenticationRequired
+	default: return class extends HttpError {
+		static CODE = code
+		constructor(mesg: string, info?: ErrorInfo) {
+			super(code, info?.name || 'HttpUnnamedError', mesg, info?.key, info?.data)
+		}
+	}
 	}
 }

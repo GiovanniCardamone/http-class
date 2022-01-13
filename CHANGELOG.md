@@ -1,3 +1,7 @@
+## [0.9.1](https://github.com/GiovanniCardamone/http-class/compare/v0.9.0...v0.9.1) (2022-01-13)
+
+
+
 # [0.9.0](https://github.com/GiovanniCardamone/http-class/compare/v0.8.0...v0.9.0) (2022-01-13)
 
 
@@ -76,15 +80,6 @@
 ### Bug Fixes
 
 * export HttpError ([8ad19d5](https://github.com/GiovanniCardamone/http-class/commit/8ad19d55cbcb6bf9026fd20df9b7d1f0cfb9c6ca))
-
-
-
-# [0.2.0](https://github.com/GiovanniCardamone/http-class/compare/v0.1.6...v0.2.0) (2021-08-05)
-
-
-### Features
-
-* generic HttpError ([ec40cf1](https://github.com/GiovanniCardamone/http-class/commit/ec40cf1ddf596dca55a541e8b09507febaa26a3b))
 
 
 

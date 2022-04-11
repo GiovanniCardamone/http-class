@@ -43,7 +43,7 @@
     "typescript": "^4.3.5"
   },
   "dependencies": {
-    "@giovannicardamone/class-schema": "^0.12.0",
+    "@giovannicardamone/class-schema": "^0.22.8",
     "reflect-metadata": "^0.1.13"
   }
 }

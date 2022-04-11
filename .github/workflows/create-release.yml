@@ -1,14 +1,15 @@
-name: CI
+name: Create Release
 
 on:
   push:
     branches:
       - main
+    paths-ignore:
+      - "docs/**"
+      - "*.md"
 
 jobs:
-
-  # build / test
-  Build:
+  build:
     name: Build Package
     runs-on: ubuntu-latest
     steps:
@@ -23,14 +24,19 @@ jobs:
       # Install Dependencies
       - run: npm ci
 
+      # Run Tests
+      - run: npm run cover
+
       # Build Package
       - run: npm run build
 
-      # Run Tests
-      - run: npm test
+      # Report Coverage
+      - name: Coveralls GitHub Action
+        uses: coverallsapp/github-action@1.1.3
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  # create / release
-  Release:
+  release:
     needs: Build
     name: Create Release Package
     runs-on: ubuntu-latest
@@ -55,18 +61,10 @@ jobs:
         uses: TriPSs/conventional-changelog-action@v3
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          git-message: 'chore(release): {version}'
-          tag-prefix: 'v'
-          output-file: 'CHANGELOG.md'
-          release-count: '10'
-          skip-on-empty: 'false'
-          skip-version-file: 'false'
-          skip-commit: 'false'
-
-      # Publish to NPM
-      - name: Publish to NPM
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
-
-
+          git-message: "chore(release): {version}"
+          tag-prefix: "v"
+          output-file: "CHANGELOG.md"
+          release-count: "10"
+          skip-on-empty: "false"
+          skip-version-file: "false"
+          skip-commit: "false"

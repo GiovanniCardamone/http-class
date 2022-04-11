@@ -1,5 +1,5 @@
 {
-  "name": "http-class",
+  "name": "@giovannicardamone/http-class",
   "version": "0.9.1",
   "description": "http class for response codes",
   "main": "dist/index.js",

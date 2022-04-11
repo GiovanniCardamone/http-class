@@ -1,15 +1,20 @@
-
-import HttpError, { Literal, ErrorInfo } from '../HttpError'
-import { schema } from 'class-schema'
+import HttpError, { Literal, ErrorInfo } from "../HttpError";
+import { schema } from "class-schema";
 
 /**
  * Http Error 500: Internal Server Error
  */
-@schema({ description: 'Internal Server Error' })
+@schema({ description: "Internal Server Error" })
 export default class InternalServerError extends HttpError {
-	static CODE = 500
+	static CODE = 500;
 
 	constructor(mesg: string, info?: ErrorInfo) {
-		super(InternalServerError.CODE, info?.name || 'Internal Server Error', mesg, info?.key, info?.data)
+		super(
+			InternalServerError.CODE,
+			info?.name || "Internal Server Error",
+			mesg,
+			info?.key,
+			info?.data
+		);
 	}
 }

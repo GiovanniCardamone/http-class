@@ -1,15 +1,20 @@
-
-import HttpError, { Literal, ErrorInfo } from '../HttpError'
-import { schema } from 'class-schema'
+import HttpError, { Literal, ErrorInfo } from "../HttpError";
+import { schema } from "class-schema";
 
 /**
  * Http Error 403: Forbidden
  */
-@schema({ description: 'Forbidden' })
+@schema({ description: "Forbidden" })
 export default class Forbidden extends HttpError {
-	static CODE = 403
+	static CODE = 403;
 
 	constructor(mesg: string, info?: ErrorInfo) {
-		super(Forbidden.CODE, info?.name || 'Forbidden', mesg, info?.key, info?.data)
+		super(
+			Forbidden.CODE,
+			info?.name || "Forbidden",
+			mesg,
+			info?.key,
+			info?.data
+		);
 	}
 }

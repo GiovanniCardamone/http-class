@@ -1,15 +1,20 @@
-
-import HttpError, { Literal, ErrorInfo } from '../HttpError'
-import { schema } from 'class-schema'
+import HttpError, { Literal, ErrorInfo } from "../HttpError";
+import { schema } from "class-schema";
 
 /**
  * Http Error 510: Not Extended
  */
-@schema({ description: 'Not Extended' })
+@schema({ description: "Not Extended" })
 export default class NotExtended extends HttpError {
-	static CODE = 510
+	static CODE = 510;
 
 	constructor(mesg: string, info?: ErrorInfo) {
-		super(NotExtended.CODE, info?.name || 'Not Extended', mesg, info?.key, info?.data)
+		super(
+			NotExtended.CODE,
+			info?.name || "Not Extended",
+			mesg,
+			info?.key,
+			info?.data
+		);
 	}
 }

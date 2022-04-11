@@ -1,15 +1,20 @@
-
-import HttpError, { Literal, ErrorInfo } from '../HttpError'
-import { schema } from 'class-schema'
+import HttpError, { Literal, ErrorInfo } from "../HttpError";
+import { schema } from "class-schema";
 
 /**
  * Http Error 508: Loop Detected
  */
-@schema({ description: 'Loop Detected' })
+@schema({ description: "Loop Detected" })
 export default class LoopDetected extends HttpError {
-	static CODE = 508
+	static CODE = 508;
 
 	constructor(mesg: string, info?: ErrorInfo) {
-		super(LoopDetected.CODE, info?.name || 'Loop Detected', mesg, info?.key, info?.data)
+		super(
+			LoopDetected.CODE,
+			info?.name || "Loop Detected",
+			mesg,
+			info?.key,
+			info?.data
+		);
 	}
 }

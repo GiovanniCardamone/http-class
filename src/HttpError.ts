@@ -1,10 +1,10 @@
-import { schema, prop } from 'class-schema'
-export type Literal = { [key: string]: any }
+import { schema, prop } from "class-schema";
+export type Literal = { [key: string]: any };
 
 export interface ErrorInfo {
-	name?: string
-	key?: string
-	data?: Literal
+	name?: string;
+	key?: string;
+	data?: Literal;
 }
 
 /**
@@ -12,22 +12,22 @@ export interface ErrorInfo {
  */
 @schema()
 export default class HttpError extends Error {
-	static CODE = -1
+	static CODE = -1;
 
 	@prop()
-	statusCode: number
+	statusCode: number;
 
 	@prop()
-	name: string
+	name: string;
 
 	@prop()
-	message: string
+	message: string;
 
 	@prop(String, { required: false })
-	key?: string
+	key?: string;
 
 	@prop(String, { required: false })
-	data?: Literal
+	data?: Literal;
 
 	constructor(
 		statusCode: number,
@@ -36,18 +36,16 @@ export default class HttpError extends Error {
 		key?: string,
 		data?: Literal
 	) {
-		super(`${name} [${statusCode}]: ${message}`)
-		this.statusCode = statusCode
-		this.name = name
-		this.message = message
-		this.key = key
-		this.data = data
+		super(`${name} [${statusCode}]: ${message}`);
+		this.statusCode = statusCode;
+		this.name = name;
+		this.message = message;
+		this.key = key;
+		this.data = data;
 	}
 }
 
 /**
  *
  */
-export class GenericHttpError extends HttpError {
-
-}
+export class GenericHttpError extends HttpError {}

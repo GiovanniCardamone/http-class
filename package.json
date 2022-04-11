@@ -4,8 +4,8 @@
   "description": "http class for response codes",
   "main": "dist/index.js",
   "private": false,
-  "prettier": "@giovannicardamone/prettier-config",
-  "eslintConfig": {
+  "--prettier": "@giovannicardamone/prettier-config",
+  "--eslintConfig": {
     "extends": "@giovannicardamone/eslint-config"
   },
   "scripts": {
@@ -35,8 +35,6 @@
   },
   "homepage": "https://github.com/GiovanniCardamone/http-class#readme",
   "devDependencies": {
-    "@giovannicardamone/eslint-config": "^0.0.1",
-    "@giovannicardamone/prettier-config": "^0.0.2",
     "@typescript-eslint/eslint-plugin": "^4.28.5",
     "@typescript-eslint/parser": "^4.28.5",
     "docsify": "^4.12.1",

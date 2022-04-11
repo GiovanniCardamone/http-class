@@ -24,9 +24,6 @@ jobs:
       # Install Dependencies
       - run: npm ci
 
-      # Run Tests
-      - run: npm run cover
-
       # Build Package
       - run: npm run build
 

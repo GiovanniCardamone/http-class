@@ -44,6 +44,6 @@
   },
   "dependencies": {
     "class-schema": "^0.22.10",
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.1.14"
   }
 }
